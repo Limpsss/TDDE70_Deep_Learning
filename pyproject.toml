@@ -1,0 +1,27 @@
+[project]
+name = "tdde70-project-group02"
+version = "0.1.0"
+description = "Fine-tuning OpenCLIP ViT-B/32 on RSICD for zero-shot remote-sensing classification"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "open-clip-torch>=3.3.0",
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "tqdm>=4.67.3",
+    "matplotlib>=3.10.9",
+    "pandas>=2.3",
+    "scikit-learn>=1.7",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }
+torchaudio = { index = "pytorch-cu130" }
